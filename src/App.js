@@ -1,12 +1,12 @@
 import "./App.css";
-import Home from "./pages/home";
+import Home from "./pages/Home.jsx";
 import { Routes, Route } from "react-router-dom";
-import SingleProduct from "./pages/single-product";
+import SingleProduct from "./pages/SingleProduct.jsx";
 import { CartProvider } from "./components/context/CartContext";
 import { useCheckoutAccess } from "./components/context/CheckoutAccessContext";
-import Checkout from "./pages/checkout";
+import Checkout from "./pages/Checkout.jsx";
 import ThankYou from "./pages/ThankYou";
-import Shop from "./pages/shop";
+import Shop from "./pages/Shop.jsx";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import EmailMarketing from "./pages/EmailMarketing";

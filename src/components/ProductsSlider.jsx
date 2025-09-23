@@ -6,12 +6,12 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import Rating from "@mui/material/Rating";
 import { LuPlus } from "react-icons/lu";
-import SwiperPrev from "./swiper-prev";
+import SwiperPrev from "./SwiperPrev";
 import { Link } from "react-router-dom";
 
 import products from "../products";
 import { HiArrowLongRight } from "react-icons/hi2";
-import SwiperNext from "./swiper-next";
+import SwiperNext from "./SwiperNext";
 
 const ProductsSlider = ({ addToCart }) => {
   const prevRef = React.useRef(null);

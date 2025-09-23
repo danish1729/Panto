@@ -1,11 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Products from "../products";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import { useCart } from "../components/context/CartContext";
 import { useCheckoutAccess } from "../components/context/CheckoutAccessContext";
 import React from "react";
 import RelatedProductsSlider from "../components/RelatedProductsSlider";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 function SingleProduct() {
   const { id } = useParams();

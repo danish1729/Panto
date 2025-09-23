@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 const validate = (form) => {
   const errors = {};

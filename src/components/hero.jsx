@@ -1,7 +1,6 @@
-import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiArrowLongRight } from "react-icons/hi2";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 const Hero = () => {
   return (

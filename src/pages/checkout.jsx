@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../components/context/CartContext";
 import {
   MdDeleteOutline,
@@ -7,7 +7,7 @@ import {
   MdCreditCard,
   MdAttachMoney,
 } from "react-icons/md";
-import { FaPayper, FaApplePay, FaGooglePay, FaPaypal } from "react-icons/fa";
+import { FaApplePay, FaGooglePay, FaPaypal } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
 

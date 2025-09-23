@@ -1,13 +1,13 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LuPlus } from "react-icons/lu";
 import Rating from "@mui/material/Rating";
 import Slider from "@mui/material/Slider";
 import { useCart } from "../components/context/CartContext";
 import Products from "../products";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import { FaFilter, FaTimes } from "react-icons/fa";
 
 const products = Products;

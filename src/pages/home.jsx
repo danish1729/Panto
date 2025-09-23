@@ -1,11 +1,9 @@
-import React from "react";
-import Hero from "../components/hero";
-import ProductsSlider from "../components/products-slider";
-import Experiences from "../components/experiences";
-import Navbar from "../components/navbar";
-import { useCart } from "../components/context/CartContext";
-import Footer from "../components/footer";
-import Materials from "../components/Materials";
+import Hero  from "../components/Hero.jsx";
+import ProductsSlider from "../components/ProductsSlider.jsx";
+import Experiences from "../components/Experiences.jsx";
+import { useCart } from "../components/context/CartContext.jsx";
+import Footer from "../components/Footer.jsx";
+import Materials from "../components/Materials.jsx";
 
 
 const Home = () => {
