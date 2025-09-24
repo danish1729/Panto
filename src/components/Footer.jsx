@@ -8,7 +8,6 @@ const Footer = () => {
       <Testimonials />
       <footer className="bg-[#fafafa] py-12 px-4 sm:px-8 md:px-16 lg:px-[120px]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8">
-          {/* Left Column */}
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-3xl font-bold font-gilroy text-[#1e1e1e]">
               <Link to={"/"}>Panto</Link>
@@ -19,9 +18,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Right Columns (Services, Furniture, Follow Us) */}
           <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 md:gap-8 lg:gap-16">
-            {/* Services */}
             <div className="flex flex-col gap-4">
               <h3 className="font-dm text-base text-[#F6973F]">Services</h3>
               <ul className="font-gilroy leading-relaxed text-sm text-[#1e1e1e] opacity-80 flex flex-col gap-3">
@@ -37,7 +34,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Furniture */}
             <div className="flex flex-col gap-4">
               <h3 className="font-dm text-base text-[#F6973F]">Furniture</h3>
               <ul className="font-gilroy leading-relaxed text-sm text-[#1e1e1e] opacity-80 flex flex-col gap-3">
@@ -76,7 +72,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Follow Us */}
             <div className="flex flex-col gap-4">
               <h3 className="font-dm text-base text-[#F6973F]">Follow Us</h3>
               <ul className="font-gilroy leading-relaxed text-sm text-[#1e1e1e] opacity-80 flex flex-col gap-3">
@@ -117,8 +112,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left mt-8 md:mt-16 pb-6 border-t border-gray-300 pt-6">
           <p className="text-gray-400 text-sm mb-2 sm:mb-0">Copyright © 2021</p>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-sm text-gray-600">

@@ -11,7 +11,7 @@ const addToCart = (product, prodQuantity = 1) => {
       if (existingProduct) {
         return prevCart.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: (item.quantity + prodQuantity - 1 || 1) + 1 }
+            ? { ...item, quantity: (item.quantity || 0) + prodQuantity }
             : item
         );
       } else {

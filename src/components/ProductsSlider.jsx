@@ -64,7 +64,6 @@ const ProductsSlider = ({ addToCart }) => {
         </div>
       </div>
 
-      {/* Swiper */}
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
@@ -90,7 +89,7 @@ const ProductsSlider = ({ addToCart }) => {
         grabCursor={true}
         loop={true}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         onInit={(swiper) => {
