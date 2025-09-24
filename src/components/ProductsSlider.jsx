@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 
 import products from "../products";
 import { HiArrowLongRight } from "react-icons/hi2";
-
-import { FaArrowRight } from "react-icons/fa6";
 import SwiperNext from "./SwiperNext";
 import SwiperPrev from "./SwiperPrev";
 
