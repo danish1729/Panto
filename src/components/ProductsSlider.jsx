@@ -60,6 +60,11 @@ const ProductsSlider = ({ addToCart }) => {
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
           breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
             // when window width is >= 640px
             640: {
               slidesPerView: 2,
@@ -83,8 +88,13 @@ const ProductsSlider = ({ addToCart }) => {
             position: "static",
           }}
         >
-          <SwiperPrev />
-          <SwiperNext />
+          {window.innerWidth < '768px' && (
+            <SwiperPrev />
+          )}
+          {window.innerWidth < '768px' && (
+            <SwiperNext />
+          )}
+          
 
           {products
             .filter((product) => product.category === activeCategory)
