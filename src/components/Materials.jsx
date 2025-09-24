@@ -31,7 +31,7 @@ const Materials = () => {
         <img
           src="/testimonial-1.png"
           alt="Testimonial of a customer"
-          className="w-full h-48 object-cover rounded-xl shadow-lg"
+          className="w-full h-[100%] object-cover rounded-xl shadow-lg"
         />
 
         <div className="row-span-2 h-full flex items-end relative">
@@ -46,7 +46,7 @@ const Materials = () => {
         <img
           src="/testimonial-3.png"
           alt="Modern furniture material"
-          className="w-full h-48 sm:h-60 object-cover rounded-xl shadow-lg"
+          className="w-full h-[100%] sm:h-60 object-cover rounded-xl shadow-lg"
         />
       </div>
     </div>

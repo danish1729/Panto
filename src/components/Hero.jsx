@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const Hero = () => {
   return (
     <>
-      <div className="bg-[url('hero-image.png')] min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center pt-24 pb-12 px-4 sm:px-8 md:px-[80px]">
+      <div className="bg-[url('hero-image.png')] min-h-screen bg-cover bg-center bg-no-repeat flex bg-fixed flex-col items-center pt-24 pb-12 px-4 sm:px-8 md:px-[80px]">
         <Navbar />
         <h1 className="text-white text-5xl sm:text-6xl md:text-[80px] mt-12 md:mt-[86px] font-bold font-gilroy leading-tight text-center capitalize">
           Make your interior more <br /> minimalistic & modern
@@ -45,7 +45,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          
           <div className="flex flex-col gap-4 text-center sm:text-left">
             <h3 className="text-xl sm:text-2xl md:text-[24px] font-bold font-gilroy text-[#1E1E1E]">
               Luxury facilities
