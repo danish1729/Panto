@@ -203,29 +203,30 @@ const Shop = () => {
 
           {/* Product Grid */}
           <div className="flex-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <AnimatePresence mode="wait">
                 {filteredProducts.map((product) => (
-                  <motion.div
-                    key={product.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex flex-col justify-center items-center cursor-pointer"
-                  >
-                    <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="object-contain w-full h-full p-4"
-                      />
-                    </div>
-                    <div className="bg-white w-full rounded-b-lg p-4 flex flex-col mt-2">
-                      <p className="text-sm font-inter text-[#8d8d8d] font-gilroy">
-                        {product.category}
-                      </p>
-                      <Link to={`/product/${product.id}`}>
+                  <Link to={`/product/${product.id}`}>
+                    <motion.div
+                      key={product.id}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex flex-col justify-center items-center cursor-pointer"
+                    >
+                      <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="object-contain w-full h-full p-4"
+                        />
+                      </div>
+                      <div className="bg-white w-full rounded-b-lg p-4 flex flex-col">
+                        <p className="text-sm font-inter text-[#8d8d8d] font-gilroy">
+                          {product.category}
+                        </p>
+
                         <h3 className="text-lg font-semibold font-inter truncate mt-1 mb-1 font-gilroy">
                           {product.name}
                         </h3>
@@ -236,21 +237,24 @@ const Shop = () => {
                           size="small"
                           readOnly
                         />
-                      </Link>
-                      <div className="mt-4 flex items-center justify-between">
-                        <span className="text-base font-semibold font-inter text-[#0D1b39] font-gilroy">
-                          <sup className="text-sm font-medium mr-1 font-gilroy">
-                            $
-                          </sup>
-                          {product.price}
-                        </span>
-                        <LuPlus
-                          className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1 cursor-pointer"
-                          onClick={() => addToCart(product)}
-                        />
+
+                        <div className="mt-4 flex items-center justify-between">
+                          <span className="text-base font-semibold font-inter text-[#0D1b39] font-gilroy">
+                            <sup className="text-sm font-medium mr-1 font-gilroy">
+                              $
+                            </sup>
+                            {product.price}
+                          </span>
+                          <LuPlus
+                            className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1 cursor-pointer"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              addToCart(product)}}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 ))}
               </AnimatePresence>
             </div>

@@ -90,19 +90,20 @@ const ProductsSlider = ({ addToCart }) => {
             .filter((product) => product.category === activeCategory)
             .map((product) => (
               <SwiperSlide key={product.id}>
-                <div className="max-w-xs mx-auto flex flex-col justify-center items-center cursor-pointer">
-                  <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="object-contain w-full h-full"
-                    />
-                  </div>
-                  <div className="bg-white w-full rounded-b-lg p-4 flex flex-col mt-2">
-                    <p className="text-sm font-inter text-[#8d8d8d]">
-                      {product.category}
-                    </p>
-                    <Link to={`/product/${product.id}`}>
+                <Link to={`/product/${product.id}`}>
+                  <div className="max-w-xs mx-auto flex flex-col justify-center items-center cursor-pointer">
+                    <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
+                    <div className="bg-white w-full rounded-b-lg p-4 flex flex-col">
+                      <p className="text-sm font-inter text-[#8d8d8d]">
+                        {product.category}
+                      </p>
+
                       <h3 className="text-lg sm:text-xl font-semibold font-inter truncate mt-1 mb-1">
                         {product.name}
                       </h3>
@@ -113,19 +114,23 @@ const ProductsSlider = ({ addToCart }) => {
                         size="small"
                         readOnly
                       />
-                    </Link>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-base font-semibold font-inter text-[#0D1b39]">
-                        <sup className="text-xs font-medium mr-1">$</sup>
-                        {product.price}
-                      </span>
-                      <LuPlus
-                        className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1"
-                        onClick={() => handleAddToCart(product.id)}
-                      />
+
+                      <div className="mt-4 flex items-center justify-between">
+                        <span className="text-base font-semibold font-inter text-[#0D1b39]">
+                          <sup className="text-xs font-medium mr-1">$</sup>
+                          {product.price}
+                        </span>
+                        <LuPlus
+                          className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleAddToCart(product.id);
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
         </Swiper>

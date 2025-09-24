@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -35,43 +35,41 @@ const RelatedProductsSlider = ({ category, addToCart }) => {
         spaceBetween={20}
         grabCursor={true}
         loop={true}
-        autoplay={{
-          delay: 1500,
-        }}
         breakpoints={{
           // when window width is >= 640px
           640: {
-            slidesPerView: 2,
+            slidesPerView: 2.5,
             spaceBetween: 30,
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             spaceBetween: 40,
           },
           // when window width is >= 1024px
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 4.5,
             spaceBetween: 42,
           },
         }}
-        slidesPerView={1}
+        slidesPerView={1.7}
       >
         {relatedProducts.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="max-w-xs mx-auto flex flex-col justify-center items-center cursor-pointer">
-              <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              <div className="bg-[#f7f7f7] w-full rounded-b-lg p-4 flex flex-col mt-2">
-                <p className="text-sm font-inter text-[#8d8d8d]">
-                  {product.category}
-                </p>
-                <Link to={`/product/${product.id}`}>
+            <Link to={`/product/${product.id}`}>
+              <div className="max-w-xs mx-auto flex flex-col justify-center items-center cursor-pointer">
+                <div className="bg-[#fafafa] w-full h-[240px] rounded-t-lg overflow-hidden relative flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+                <div className="bg-[#f7f7f7] w-full rounded-b-lg p-4 flex flex-col">
+                  <p className="text-sm font-inter text-[#8d8d8d]">
+                    {product.category}
+                  </p>
+
                   <h3 className="text-lg sm:text-xl font-semibold font-inter truncate mt-1 mb-1">
                     {product.name}
                   </h3>
@@ -82,19 +80,23 @@ const RelatedProductsSlider = ({ category, addToCart }) => {
                     size="small"
                     readOnly
                   />
-                </Link>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-base font-semibold font-inter text-[#0D1b39]">
-                    <sup className="text-xs font-medium mr-1">$</sup>
-                    {product.price}
-                  </span>
-                  <LuPlus
-                    className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1 cursor-pointer"
-                    onClick={() => handleAddToCart(product.id)}
-                  />
+
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-base font-semibold font-inter text-[#0D1b39]">
+                      <sup className="text-xs font-medium mr-1">$</sup>
+                      {product.price}
+                    </span>
+                    <LuPlus
+                      className="w-8 h-8 bg-[#0D1B39] text-white rounded-full p-1 cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleAddToCart(product.id)
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
