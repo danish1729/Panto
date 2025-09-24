@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Hero = () => {
@@ -37,9 +38,11 @@ const Hero = () => {
               The advantage of hiring a workspace with us is that gives you
               comfortable service and all-around facilities.
             </p>
-            <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
-              More Info <HiArrowLongRight />
-            </p>
+            <Link to="/about">
+              <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
+                More Info <HiArrowLongRight />
+              </p>
+            </Link>
           </div>
 
           
@@ -51,9 +54,11 @@ const Hero = () => {
               The advantage of hiring a workspace with us is that givees you
               comfortable service and all-around facilities.
             </p>
-            <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
-              More Info <HiArrowLongRight />
-            </p>
+            <Link to="/about">
+              <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
+                More Info <HiArrowLongRight />
+              </p>
+            </Link>
           </div>
 
           <div className="flex flex-col gap-4 text-center sm:text-left">
@@ -64,9 +69,11 @@ const Hero = () => {
               The advantage of hiring a workspace with us is that givees you
               comfortable service and all-around facilities.
             </p>
-            <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
-              More Info <HiArrowLongRight />
-            </p>
+            <Link to="/about">
+              <p className="text-sm font-medium font-gilroy text-[#E58411] leading-[185%] flex items-center justify-center sm:justify-start gap-[11px] cursor-pointer">
+                More Info <HiArrowLongRight />
+              </p>
+            </Link>
           </div>
         </div>
       </div>

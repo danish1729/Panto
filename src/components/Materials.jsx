@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 const Materials = () => {
   return (
@@ -16,12 +17,14 @@ const Materials = () => {
           environment, using a very expensive and famous capital but at a
           relatively low price
         </p>
-        <button
-          type="button"
-          className="mt-6 inline-flex items-center text-[#E58411] font-medium font-gilroy text-sm"
-        >
-          More Info <span className="ml-2">→</span>
-        </button>
+        <Link to="/about">
+          <button
+            type="button"
+            className="mt-6 inline-flex items-center text-[#E58411] font-medium font-gilroy text-sm"
+          >
+            More Info <span className="ml-2">→</span>
+          </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-[1fr_1.8fr] gap-4 sm:gap-6 w-full mx-auto max-w-2xl md:max-w-3xl">

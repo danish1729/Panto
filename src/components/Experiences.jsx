@@ -1,4 +1,5 @@
 import { HiArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Experiences = () => {
   return (
@@ -23,9 +24,11 @@ const Experiences = () => {
           interiors are made by people who are professionals in their fields
           with an elegant and luxurious style and with premium quality materials
         </p>
-        <p className="text-sm font-medium font-gilroy text-[#E58411] leading-relaxed flex items-center justify-center md:justify-start gap-2 cursor-pointer">
-          More Info <HiArrowLongRight />
-        </p>
+        <Link to="/about">
+          <p className="text-sm font-medium font-gilroy text-[#E58411] leading-relaxed flex items-center justify-center md:justify-start gap-2 cursor-pointer">
+            More Info <HiArrowLongRight />
+          </p>
+        </Link>
       </div>
     </div>
   );
